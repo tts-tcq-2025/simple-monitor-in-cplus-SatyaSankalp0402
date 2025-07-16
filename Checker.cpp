@@ -12,10 +12,11 @@ bool batteryIsOk(float temperature, float soc, float chargeRate) {
   } else if(chargeRate > 0.8) {
     cout << "Charge Rate out of range!\n";
     return false;
-  }
+  }else{
+  
   return true;
 }
-
+}
 int main() {
   assert(batteryIsOk(25, 70, 0.7) == true);
   assert(batteryIsOk(50, 85, 0) == false);
